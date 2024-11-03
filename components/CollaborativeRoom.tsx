@@ -40,11 +40,11 @@ const CollaborativeRoom = ({ roomId, roomMetadata, users, currentUserType, userI
   };
 
   const containerRef = useOutsideClick({
-    onOutsideClick: () => {
+    onOutsideClick: () => (
       setEditing(false),
-        (documentTitle !== roomMetadata.title) &&
-        updateDocument(roomId, documentTitle)
-    }
+      (documentTitle !== roomMetadata.title) &&
+      updateDocument(roomId, documentTitle)
+    )
   });
 
   useEffect(() => {
