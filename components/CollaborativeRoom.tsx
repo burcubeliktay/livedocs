@@ -23,17 +23,18 @@ const CollaborativeRoom = ({ roomId, roomMetadata, users, currentUserType, userI
     if (e.key === "Enter") {
       setLoading(true);
 
-      if (documentTitle !== roomMetadata.title) {
-        const updatedDocument = await updateDocument(roomId, documentTitle);
-        if (updatedDocument) {
-          setEditing(false);
-        }
-      }
       try {
+        if (documentTitle !== roomMetadata.title) {
+          const updatedDocument = await updateDocument(roomId, documentTitle);
 
+          if (updatedDocument) {
+            setEditing(false);
+          }
+        }
       } catch (error) {
-
+        console.error(error);
       }
+
       setLoading(false);
     }
   };
