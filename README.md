@@ -11,6 +11,10 @@
 
   <h3 align="center">A Collaborative LiveDocs</h3>
 
+
+  <p>This project features secure GitHub authentication and a real-time collaborative text editor for creating, deleting, and sharing documents. Users receive notifications for shares, comments, and collaborator activity, with real-time presence indicators for active collaborators. Fully responsive and built for seamless use across devices.
+
+</p>
   
 </div>
 
